@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+  </head>
+  <body>
+
+    <!-- <div class="bg-image">
+      <img src="/gradient amoled wall.png" alt="">
+    </div> -->
+    
+    <div id="pop-up" class="pop-up">
+      <!-- create a pop header -->
+      <div class="pop-up-header">
+        <span id="close-button" class="close-button">&times</span>
+        <h2>Welcome</h2>
+      </div>
+
+      <!-- Create a pop-up content -->
+      <div class="pop-up-content">
+        <p>I make this only for practice.</p>
+      </div>
+    </div>
+
+    <!-- Styles of button code -->
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(background-img.png);
+      }
+
+      .middle-div {
+        background-color: rgb(81, 169, 223);
+        height: 500px;
+        width: 650px;
+        margin-top: 100px;
+        position: relative;
+        border-radius: 15px;
+
+        /* for make button in center */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .btn-1,
+      .btn-2,
+      .btn-3,
+      .btn-4 {
+        text-decoration: none;
+        border: none;
+      }
+
+      .btn-1 {
+        padding: 15px 30px;
+        font-size: 15px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border-radius: 32px 0 0 32px;
+        margin-bottom: 10px;
+      }
+
+      .btn-1:hover {
+        background-color: rgb(114, 99, 99);
+      }
+      .btn-2:hover {
+        background-color: rgb(204, 107, 107);
+      }
+      .btn-3:hover {
+        background-color: rgb(71, 99, 200);
+      }
+      .btn-4:hover {
+        background-color: rgb(185, 33, 199);
+      }
+
+      .btn-2 {
+        padding: 15px 30px;
+        font-size: 15px;
+        background-color: rgb(218, 103, 53);
+        color: white;
+        font-weight: bold;
+        border-radius: 32px 0 32px 0;
+        margin: 10px;
+      }
+
+      .btn-3 {
+        padding: 15px 30px;
+        font-size: 15px;
+        background-color: rgb(48, 40, 216);
+        color: white;
+        font-weight: bold;
+        border-radius: 0 32px 0 32px;
+        margin: 10px;
+      }
+
+      .btn-4 {
+        padding: 15px 30px;
+        font-size: 15px;
+        background-color: rgb(228, 14, 181);
+        color: white;
+        font-weight: bold;
+        border-radius: 0 32px 32px 0;
+        margin-top: 10px;
+      }
+
+      /* Pop-Up window code */
+      .pop-up {
+        position: fixed;
+        width: 300px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 15px;
+        z-index: 10;
+      }
+
+      .pop-up-header {
+        padding: 10px;
+        background-color: lightblue;
+        text-align: center;
+        border-radius: 15px;
+      }
+
+      .pop-up-content {
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .close-button {
+        float: right;
+        font-size: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+      }
+
+      .close-button:hover {
+        color: red;
+      }
+    </style>
+
+    <div class="middle-div">
+      <button class="btn-1">See More</button>
+      <button class="btn-2">See More</button>
+      <button class="btn-3">See More</button>
+      <button class="btn-4">See More</button>
+    </div>
+
+    <!-- Js code of pop-up window -->
+    <script>
+      var popUp = document.getElementById("pop-up");
+
+      var closeButton = document.getElementById("close-button");
+      closeButton.addEventListener("click", function () {
+        popUp.style.display = "none";
+      });
+
+      setTimeout(function () {
+        popUp.style.display = "none";
+      }, 3000);
+    </script>
+  </body>
+</html>
